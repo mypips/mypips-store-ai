@@ -24,14 +24,18 @@ Talk to them in their language (Hebrew by default). Keep it short and friendly.
 Use the first route that fits and do not continue to later routes.
 
 1. The `mypips` tools are already available (for example `getStore`, `findTool`): use them, do not reinstall.
-2. Chat app (Claude, ChatGPT and similar): if the official mypips connector is available, use it.
+2. Claude app (chat or Cowork, web or desktop): ask the person to open Customize > Plugins > Add marketplace,
+   enter `mypips/mypips-store-ai` and install **mypips**. Then, on the plugin's Connectors tab, they connect mypips.
+   Slash commands such as `/plugin` don't work in the Claude app; don't suggest them there.
+3. Other chat apps (ChatGPT and similar): if the official mypips connector is available, use it.
    If not, ask the person to add it in the app's connector settings and wait until it is on.
    Until mypips is listed there, the person adds a custom connector with the URL `https://mcp.mypips.app/mcp/merchant`.
    Guide: https://help.mypips.co.il/he/articles/15252379-חיבור-החנות-שלכם-ל-claude-ו-chatgpt
-3. Claude Code: `/plugin marketplace add mypips/mypips-store-ai`, then `/plugin install mypips@mypips-store-ai`.
-4. Any agent with a terminal: `npx skills add mypips/mypips-store-ai`, then add the remote (HTTP) MCP server
+4. Claude Code (terminal, or the Code tab of the desktop app): `/plugin marketplace add mypips/mypips-store-ai`,
+   then `/plugin install mypips@mypips-store-ai`.
+5. Any agent with a terminal: `npx skills add mypips/mypips-store-ai`, then add the remote (HTTP) MCP server
    `https://mcp.mypips.app/mcp/merchant` in the agent's MCP settings.
-5. None of these: say you cannot set up mypips from here, suggest one of the routes above, and stop.
+6. None of these: say you cannot set up mypips from here, suggest one of the routes above, and stop.
 
 If a new install is not picked up, ask the person to start a new session and repeat their request.
 Sign-in uses OAuth: a mypips window opens, the person signs in, picks the store and approves. You never see a key.
