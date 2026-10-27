@@ -1,0 +1,14 @@
+{
+  "name": "mypips-store-ai",
+  "description": "Official mypips skills and MCP setup for AI agents",
+  "owner": {
+    "name": "mypips"
+  },
+  "plugins": [
+    {
+      "name": "mypips",
+      "source": "./",
+      "description": "Open and run a mypips store with your AI agent"
+    }
+  ]
+}
