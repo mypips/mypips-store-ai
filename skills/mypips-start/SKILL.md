@@ -40,14 +40,19 @@ Use the first route that fits and do not continue to later routes.
 If a new install is not picked up, ask the person to start a new session and repeat their request.
 Sign-in uses OAuth: a mypips window opens, the person signs in, picks the store and approves. You never see a key.
 
-## 2. Open the store (the person does this)
+## 2. New store or existing store
 
-1. Ask what they sell, the store name they want, and whether they already have a mypips store.
-2. If they have one, skip to step 3.
-3. If not, send them to `https://mypips.app/join?utm_source=agent` to sign up and create the store
+When the person asks to build, open or create a store ("בנה לי חנות", "תפתח לי חנות", "I want a store"),
+do not assume it is a new one. First find out:
+
+1. If the mypips tools are already connected, call `getStore`. A store comes back: ask whether to manage
+   this store or open a new one. Say its name so they can decide.
+2. Otherwise ask: "יש לכם כבר חנות ב mypips, או פותחים חנות חדשה?" Wait for the answer.
+3. An existing store: skip to step 3 (Connect) and work on that store. Do not sign them up again.
+4. A new store: ask what they sell and the store name they want, then send them to `https://mypips.app/join?utm_source=agent` to sign up and create the store
    (name, web address, phone, logo).
    Guide: https://help.mypips.co.il/he/articles/9580237-פתיחת-חנות-במייפיפס
-4. Wait until they say it is done.
+5. Wait until they say it is done.
 
 ## 3. Connect
 
